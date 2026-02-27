@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admission Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            padding: 30px;
+        }
+
+        .form-container {
+            width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 4px solid #222;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #eee;
+            margin-right: 20px;
+        }
+
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #eee;
+            margin-right: 20px;
+        }
+
+
+
+        .title h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .title h2 {
+            margin: 5px 0 0;
+            font-size: 18px;
+            font-weight: normal;
+            color: #555;
+        }
+
+        /* SECTION HEADER */
+        .section-title {
+            background: #222;
+            color: white;
+            padding: 8px 12px;
+            margin: 25px 0 15px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* FORM ROW */
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .row label {
+            width: 220px;
+            font-size: 14px;
+        }
+
+        .row input[type="text"],
+        .row input[type="tel"] {
+            flex: 1;
+            border: none;
+            border-bottom: 1px solid #444;
+            padding: 6px;
+            font-size: 14px;
+        }
+
+        /* DOB BOXES */
+        .dob-boxes {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dob-boxes input {
+            width: 30px;
+            height: 28px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        .dob-label {
+            font-size: 11px;
+            text-align: center;
+            margin-top: 2px;
+            padding: 0 0.99em;
+        }
+
+        /* CHECKBOXES */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            transform: scale(1.1);
+        }
+
+        /* MULTILINE FIELD */
+        .multiline {
+            border: 1px solid #444;
+            height: 60px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 30px;
+            border-top: 4px solid #222;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .phone-icon {
+            width: 35px;
+            height: 35px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px 0;
+            background-color: #131313;
+            color: #fff;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .btn:hover {
+            background-color: #0c0c0c;
+            transform: translateY(-2px);
+        }
+
+        /* Click effect */
+        .btn:active {
+            transform: translateY(0);
+            background-color: #000000;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .form-container {
+                box-shadow: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/mldnjzav" method="POST">
+            <div class="form-container">
+
+                <!-- HEADER -->
+                <div class="header">
+                    <div class="logo">
+                        <img class="logo-img" src="final.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>SAVIORS ACADEMY</h1>
+                        <h2>ADMISSION FORM</h2>
+                    </div>
+                </div>
+
+                <!-- PERSONAL INFO -->
+                <div class="section-title">Personal Information</div>
+
+                <div class="row">
+                    <label>Student Name :</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="row">
+                    <label>Parent Name :</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="row">
+                    <label>Student Contact Number :</label>
+                    <input type="tel" required>
+                </div>
+
+                <div class="row">
+                    <label>Parent Contact Number :</label>
+                    <input type="tel" required>
+                </div>
+
+                <!-- EDUCATIONAL INFO -->
+                <div class="section-title">Educational Information</div>
+
+                <div class="row">
+                    <label>School Name :</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="row">
+                    <label>Class/Grade :</label>
+                    <input type="text">
+                    <label style="width:120px; margin-left:20px;">Date Of Birth :</label>
+                    <div>
+                        <div class="dob-boxes">
+                            <input type="text" required>
+                            <input type="text" required>
+                            <input type="text" required>
+                            <input type="text" required>
+                            <input type="text" required>
+                            <input type="text" required>
+                        </div>
+                        <div class="dob-boxes">
+                            <div class="dob-label">D</div>
+                            <div class="dob-label">D</div>
+                            <div class="dob-label">M</div>
+                            <div class="dob-label">M</div>
+                            <div class="dob-label">Y</div>
+                            <div class="dob-label">Y</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label>Group (Bio/Cs) :</label>
+                    <input type="text" required>
+
+                    <label style="width:175px; margin-left:20px;">Gender (Male/Female) :</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="row">
+                    <label style="width:225px;">Failed Subjects (if any with details) :</label>
+                </div>
+                <input class="multiline" type="text">
+
+                <!-- ADDITIONAL QUESTIONS -->
+                <div class="section-title">Additional Questions</div>
+
+                <div class="row">
+                    <label style="width:280px;">Reference (from where you know about us) :</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="row">
+                    <label>Academic concerns (optional) :</label>
+                </div>
+                <input class="multiline" type="text">
+
+                <!-- FOOTER -->
+                <div class="footer">
+                    <div class="row">
+                        <img class="phone-icon" src="whatsapp.png" alt="">
+                        <p style="margin-top: 1.15em;">0314-1051588</p>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Submit Form</button>
+
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
