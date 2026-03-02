@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admission Form</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
@@ -17,7 +18,8 @@
         }
 
         .form-container {
-            width: 800px;
+            width: 100%;
+            max-width: 800px;
             margin: auto;
             background: white;
             padding: 30px 40px;
@@ -77,12 +79,14 @@
         /* FORM ROW */
         .row {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 12px;
+            gap: 10px;
+            margin-bottom: 15px;
         }
 
         .row label {
-            width: 220px;
+            flex: 0 0 220px;
             font-size: 14px;
         }
 
@@ -190,6 +194,44 @@
             .form-container {
                 box-shadow: none;
                 width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+        
+            .form-container {
+                padding: 20px;
+            }
+        
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .logo,
+            .logo-img {
+                margin: 0 auto 15px;
+            }
+        
+            .row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .row label {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+        
+            .row input[type="text"],
+            .row input[type="tel"] {
+                width: 100%;
+            }
+        
+            .dob-boxes {
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -310,5 +352,6 @@
 
 
 </html>
+
 
 
