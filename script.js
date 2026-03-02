@@ -17,19 +17,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     } else {
       alert("Oops! There was a problem submitting your form.");
     }
+  }).catch(() => {
+      alert("Network error. Try again.");
   });
 });
-
-
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const button = document.querySelector('.contact-form button');
-  button.innerHTML = 'Submitting...';
-
-  setTimeout(() => {
-    button.innerHTML = 'Submit Form';
-    alert('Message sent successfully!');
-  }, 2000);
-});
-
